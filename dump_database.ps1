@@ -20,7 +20,7 @@ $Objects += $db.UserDefinedFunctions
 
 new-item -type directory -name "$database"-path "$path" | Out-Null
 
-$scripter = New-Object ("Microsoft.SqlServer.Management.Smo.Scripter") $server 
+$scripter = New-Object ("Microsoft.SqlServer.Management.Smo.Scripter") ($SMOserver)
  
 # Set general options
 $scripter.Options.AppendToFile = $True
